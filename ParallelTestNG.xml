@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Parallel suite" thread-count="7" parallel="tests">
+
+    <listeners>
+		<listener class-name="extentReporterPack.ExtentReportListner" />
+	</listeners>
+<test name="LoginTest">
+  
+<parameter name="Browser" value="Chrome"/>
+   <classes>
+         <class name="testScenario.Login.LoginTest01"/>
+   </classes>
+   
+</test>
+    <test name="Invalid LoginTest1">
+  <parameter name="Browser" value="Chrome"/>
+   <classes>
+         <class name="testScenario.Login.LoginTest02"/>
+    </classes>   
+</test> 
+ <test name="Invalid LoginTest2">
+  <parameter name="Browser" value="Chrome"/>
+   <classes>
+         <class name="testScenario.Login.LoginTest03"/>
+    </classes>   
+</test>
+<test name="Invalid LoginTest3">
+  <parameter name="Browser" value="Chrome"/>
+   <classes>
+         <class name="testScenario.Login.LoginTest04"/>
+    </classes>   
+</test>                
+<test name="CompanyTest">
+  
+   <parameter name="Browser" value="Chrome"/>
+      <classes>
+
+           <class name="testScenario.Company.CompanyTest01"></class>
+
+      </classes>
+
+</test>
+<test name="ClientTest">
+  
+  <parameter name="Browser" value="chrome"/>
+     <classes>
+
+          <class name="testScenario.Client.ClientTest01"></class>
+          
+     </classes>
+</test>
+<test name="InvoiceTest">
+  
+  <parameter name="Browser" value="chrome"/>
+     <classes>
+
+          <class name="testScenario.Invoice.InvoiceTest01"></class>
+          
+     </classes>
+</test>
+
+</suite>
+
+
